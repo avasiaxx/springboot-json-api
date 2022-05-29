@@ -10,16 +10,21 @@ public class RecipeDetails {
     //List of Recipe Details
     public List<String> ingredients;
 
+    //List of Recipe Instructions
+    public List<String> instructions;
+
     //Number of steps required in the recipe instructions
     public int numSteps;
 
     /**
-     * Sets the ingredients taken in from the constructor then calculates the amount of steps it takes to make
-     * the recipe
+     * Gets the recipe details then sets the ingredients/instructions then calculates the amount of instructions
+     * it takes to make the recipe
      * @param ingredients is the recipe ingredients
+     * @param instructions is the recipe instructions
      */
-    public RecipeDetails(List<String> ingredients) {
+    public RecipeDetails(List<String> ingredients, List<String> instructions) {
         this.ingredients = ingredients;
-        numSteps = ingredients.size();
+        this.instructions = instructions;
+        numSteps = instructions.size();
     }
 }

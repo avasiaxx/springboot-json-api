@@ -20,7 +20,7 @@ public class RecipesList {
     public RecipeDetails findRecipeDetails(String name) {
         for (Recipe r : recipes) {
             if (r.name.equals(name)){
-                return new RecipeDetails(r.ingredients);
+                return new RecipeDetails(r.ingredients, r.instructions);
             }
         }
         return null;

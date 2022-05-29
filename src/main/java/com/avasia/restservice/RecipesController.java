@@ -81,7 +81,7 @@ public class RecipesController {
     public ResponseEntity<String> editRecipe(@RequestBody Recipe editedRecipe){
         if(recipesList.findIfRecipeExists(editedRecipe)) {
             recipesList.changeRecipe(editedRecipe);
-            String json = gson.toJson(recipesList.recipes);
+            String json = gson.toJson(recipesList);
             FileHandler.writeRecipesToFile(json);
             return ResponseEntity.status(HttpStatus.NO_CONTENT)
                     .build();

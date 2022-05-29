@@ -1,5 +1,6 @@
 package com.avasia.restservice;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,10 +13,10 @@ public class NewRecipe {
     public String recipeName;
 
     //New Recipe Ingredients
-    List<String> ingredients;
+    ArrayList<String> ingredients;
 
     //New Recipe Instructions
-    List<String> instructions;
+    ArrayList<String> instructions;
 
     /**
      * Gets the new recipe through the constructor then sets all of it's variables
