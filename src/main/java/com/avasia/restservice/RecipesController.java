@@ -71,6 +71,12 @@ public class RecipesController {
                 .body(gson.toJson(exception));
     }
 
+    /**
+     *
+     * @param editedRecipe contains the submitted recipe
+     * @return return either an HTTP.NO_CONTENT status once the recipe is found and replaced or returns HttpStatus.NOT_FOUND
+     * if a recipe does not exist
+     */
     @PutMapping("/recipes")
     public ResponseEntity<String> editRecipe(@RequestBody Recipe editedRecipe){
         if(recipesList.findIfRecipeExists(editedRecipe)) {
